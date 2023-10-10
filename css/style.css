@@ -6,6 +6,18 @@
 }
 
 .gallery {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.active {
+    display: block;
+}
+
+img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
 }
