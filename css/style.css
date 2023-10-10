@@ -13,13 +13,14 @@
     
 }
 
+.image {
+    display: none;
+}
+
 .active {
     display: block;
 }
 
-.image {
-    display: none;
-}
 
 img {
     width: 300px;
