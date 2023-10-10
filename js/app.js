@@ -30,9 +30,34 @@ galleryDOMElement.innerHTML += htmlString;
 console.log(galleryDOMElement);
 }
 
+
 // - richiamo dal DOM gli elementi con classe 'image'
 const imageDOMElement = document.querySelectorAll('.image');
 // - creo una variabile in cui do la classe 'active solo alla prima immagine
-const firstImageDOMElement = imageDOMElement[0];
-firstImageDOMElement.classList.add('active')
-console.log(firstImageDOMElement)
+
+// const firstImageDOMElement = imageDOMElement[0];
+// firstImageDOMElement.classList.add('active')
+let imgActive = 0
+
+imageDOMElement[imgActive].classList.add('active')
+console.log(imageDOMElement)
+
+// - al click dell utente sulle freccie cambierà immagine
+//   - creo due variabile previous e next
+let next = document.querySelector('.next')
+let previous = document.querySelector('.previous')
+console.log(next, previous)
+
+//   - creo una variabile eventlistner per next
+next.addEventListener ('click', function() {
+    imageDOMElement[imgActive].classList.remove('active')
+
+    if ( imgActive === images.length-1) {
+        imgActive = 0
+        console.log(imageDOMElement)
+    } else {
+        imgActive++;
+    }
+    imageDOMElement[imgActive].classList.add('active')
+})
+//   - creo una variabile eventlistner per previous
