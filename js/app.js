@@ -52,12 +52,34 @@ console.log(next, previous)
 next.addEventListener ('click', function() {
     imageDOMElement[imgActive].classList.remove('active')
 
-    if ( imgActive === images.length-1) {
+    imgActive++;
+
+
+    if (imgActive === images.length -1) {
         imgActive = 0
-        console.log(imageDOMElement)
-    } else {
-        imgActive++;
+        
     }
+    // if ( imgActive === images.length-1) {
+    //     imgActive = 0
+       
+    // } else {
+    //     imgActive++;
+    // }
     imageDOMElement[imgActive].classList.add('active')
-})
+});
+
 //   - creo una variabile eventlistner per previous
+previous.addEventListener ('click', function() {
+    console.log('click')
+    imageDOMElement[imgActive].classList.remove('active')
+
+
+    if (imgActive == 0){
+        imgActive = images.length - 1 ;
+    } else {
+        imgActive--;
+    }
+    
+    imageDOMElement[imgActive].classList.add('active')
+    console.log(imageDOMElement)
+});

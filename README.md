@@ -28,6 +28,9 @@ Dato un array contenente una lista di cinque immagini, creare un carosello come 
 - richiamo dal DOM gli elementi con classe 'image'
 - creo una variabile in cui do la classe 'active solo alla prima immagine
 
-     
+- al click dell utente sulle freccie cambierà immagine
+  - creo due variabile previous e next
+  - creo una variabile eventlistner per next
+  - creo una variabile eventlistner per previous
 
   
